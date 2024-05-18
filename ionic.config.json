@@ -1,0 +1,7 @@
+{
+  "name": "webkert_chat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
