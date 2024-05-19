@@ -1,0 +1,43 @@
+.messages-window
+{
+    display: flex;
+    margin: 5px;
+    height: 88%;
+    max-height: 88%;
+    border: 1px solid black;
+}
+
+.chat-input
+{
+}
+
+.send-container
+{
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 10px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-but
+{
+    margin: 3px;
+}
+
+.main-content
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-raised-button
+{
+}
+
+.user-msg
+{
+    color: rgb(170, 47, 201);
+}

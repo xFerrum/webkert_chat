@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loadingDone">
+
+  <mat-card class="profile-card">
+
+    <ion-img id="profilePic" src="assets/icons/placeholder.png" alt="Profile Picture"></ion-img>
+
+    <ion-card-title id="username">
+      <h2>{{ user.username }}</h2>
+    </ion-card-title>
+
+    <mat-card-content>
+  
+      <ion-row class="row">
+          <ion-img class="profileIcon" src="assets/icons/placeholder.png"></ion-img>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label>{{ user.email }}</ion-label>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="but-container">
+          <ion-button class="profileBut" type="submit" color="primary" expand="block" (click)="signOut()">Sign Out</ion-button>
+          <ion-button class="profileBut" color="danger" expand="block" (click)="deleteAcc()">Delete Account</ion-button>
+        </ion-col>
+      </ion-row>
+      
+    </mat-card-content>
+
+  </mat-card>
+
+</ion-content>

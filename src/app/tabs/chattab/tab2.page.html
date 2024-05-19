@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Chat
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loadingDone" [fullscreen]="true" class="main-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Chat</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="messages-window">
+    <mat-list>
+      <ion-item *ngFor="let msg of messages" [ngClass]="(msg.sentBy === username) ? 'user-msg' : ''">
+        <label>{{ msg.sentBy }}:</label> <label>{{ msg.content }}</label>
+      </ion-item>
+    </mat-list>
+</ion-content>
+
+  <div class="send-container">
+    <ion-input [(ngModel)]="message" type="text" placeholder="Type a message..." class="chat-input"></ion-input>
+    <button mat-raised-button color="primary" class="send-but" (click)="sendClicked()">Send</button>
+  </div>
+</ion-content>

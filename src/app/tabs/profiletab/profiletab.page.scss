@@ -1,0 +1,50 @@
+.profileIcon
+{
+    width: 25px;
+    height: 25px;
+}
+
+#profilePic
+{
+    padding-top: 10px;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#username
+{
+    text-align: center;
+    margin-top: 0;
+}
+
+.profileBut
+{
+    padding: 5px;
+    margin-bottom: 0;
+    width: 100px;
+}
+
+.profile-card
+{
+    height: 80%;
+    margin: 6px;
+    background-color: rgba(18, 89, 117, 0.4);
+    color: black;
+}
+
+.row
+{
+}
+
+.but-container
+{
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
