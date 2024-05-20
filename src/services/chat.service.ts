@@ -20,6 +20,7 @@ export class ChatService
     unsub: any;
     messages!: Array<Message>;
     currentRoom!: String;
+    firstLoad = true;
 
     constructor()
     {
@@ -34,11 +35,15 @@ export class ChatService
             const docChanges = snapshot.docChanges();
             if (docChanges.length > 0)
             {
-                const addedDoc = docChanges[0];
-                if (addedDoc.type === 'added')
+                if (!this.firstLoad)
                 {
-                    if (addedDoc.doc.data()['toRoom'] === roomID) msgArray.push(addedDoc.doc.data() as Message);
+                    const addedDoc = docChanges[0];
+                    if (addedDoc.type === 'added')
+                    {
+                        if (addedDoc.doc.data()['toRoom'] === roomID) msgArray.push(addedDoc.doc.data() as Message);
+                    }
                 }
+                else this.firstLoad = false;
             }
         });
     }

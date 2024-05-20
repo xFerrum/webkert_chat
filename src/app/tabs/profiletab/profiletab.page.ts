@@ -6,12 +6,14 @@ import { PopUpService } from 'src/services/popup.service';
 import { CommonModule } from '@angular/common';
 import { User } from 'src/classes/user';
 import { MatCardModule } from '@angular/material/card';
+import { PeldaPipe } from 'src/services/peldapipe';
+
 @Component({ 
   selector: 'app-profile',
   templateUrl: 'profiletab.page.html',
   styleUrls: ['profiletab.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, MatCardModule],
+  imports: [IonicModule, CommonModule, MatCardModule, PeldaPipe],
 })
 
 export class ProfilePage implements OnInit {

@@ -16,7 +16,7 @@
 <ion-content class="messages-window">
     <mat-list>
       <ion-item *ngFor="let msg of messages" [ngClass]="(msg.sentBy === username) ? 'user-msg' : ''">
-        <label>{{ msg.sentBy }}:</label> <label>{{ msg.content }}</label>
+        <label>{{ msg.sentBy }}: </label> <label>{{ msg.content }}</label>
       </ion-item>
     </mat-list>
 </ion-content>
